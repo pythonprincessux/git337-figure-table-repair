@@ -1,0 +1,12 @@
+Replaced the generic container around the image and caption with semantic `<figure>` and `<figcaption>` elements to establish a programmatic relationship between the visual asset and its description.
+
+1. Improved the SVG markup by defining descriptive alternative text and adding explicit intrinsic `width` and `height` attributes to prevent cumulative layout shift.
+2. Added fluid CSS rules (`max-width: 100%` and `height: auto`) on the graphic to ensure the entire figure scales down proportionally within narrow viewports.
+3. Added an explicit `<caption>` element to identify the data set and updated the header row cells from generic `<td>` tags to semantic `<th>` elements marked with `scope="col"`.
+4. Structured the markup into `<thead>` and `<tbody>` sections while applying right-aligned tabular styling to improve numeric readability and scannability.
+5. Wrapped data table in a container styled with `overflow-x: auto` so users can scroll horizontally without clipping or breaking the layout on narrow screens.
+6. Made the scrollable container keyboard-focusable using `tabindex="0"`, supplied an accessible label via `aria-label`, and ensured an unambiguous visible focus ring when navigated by keyboard.
+7. Verified the implementation across viewport widths of 320px and 1280px, at 200% text zoom, through sequential keyboard navigation, and inside the accessibility tree to confirm all data points remained reachable and properly exposed.
+9. Lastly, tested for viewport overflow.
+
+## AI Disclosure: I used ChatGPT for AI-assisted critique of small HTML and CSS repairs, guidance through the testing workflow, and assistance polishing the wording of my repair log and AI disclosure. I reviewed and implemented the suggested code changes in my own files and verified the repaired page directly in Chrome using responsive viewport testing, keyboard navigation, 200% zoom, and the accessibility tree. All reported testing results reflect my own browser observations.
